@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'reactstrap';
 class FlavourGrid extends Component {
   renderFlavour(flavour, i) {
     return (
-      <Col xs="3" className="flavour-grid-item" key={i}>
+      <Col xs="3" className="flavourgrid-item" key={i}>
         <Flavour key={i} i={i} flavour={flavour} {...this.props}/>
       </Col>
     )

@@ -7,7 +7,7 @@ class Flavour extends Component {
     const { flavour, i, comments } = this.props;
 
     return (
-      <Card>
+      <Card className="flavour-card">
         <CSSTransitionGroup transitionName="like" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
             <span key={flavour.likes} className="likes-heart">{flavour.likes}</span>
         </CSSTransitionGroup>
