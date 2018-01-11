@@ -1,7 +1,7 @@
 // increment like
 export function increment(index){
   return {
-    type: 'INCREMENT_LIKES',
+    type: 'FLAVOUR::INCREMENT_LIKES',
     index
   }
 }
@@ -9,7 +9,7 @@ export function increment(index){
 // add comment
 export function addComment(postId, author, comment){
   return {
-    type: 'ADD_COMMENT',
+    type: 'FLAVOUR::ADD_COMMENT',
     postId,
     author,
     comment
@@ -19,7 +19,7 @@ export function addComment(postId, author, comment){
 //remove comment
 export function removeComment(postId, index){
   return {
-    type: 'REMOVE_COMMENT',
+    type: 'FLAVOUR::REMOVE_COMMENT',
     postId,
     index
   }

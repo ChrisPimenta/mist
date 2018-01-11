@@ -8,6 +8,7 @@ p {
 	line-height: 1.5;
 }
 
+/*TODO: put color in variable*/
 h1 {
 	font-family: billabong, 'billabongregular';
 	text-align: center;
@@ -55,4 +56,61 @@ h1 a:focus {
   margin-bottom: 10rem;
   align-content: center;
   border-color: rgba(0, 0, 0, 0.66);
+  padding-bottom: 5rem;
+  padding-top: 5rem;
 }
+
+.flavour-grid-item {
+  margin-bottom: 2rem;    
+  max-width: none;
+}
+
+.like-button {
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.66);
+  border-color: rgba(0, 0, 0, 0.66);
+  color: white;
+}
+
+.like-button:hover {
+  background-color: white;
+  color: black;
+}
+
+/*Source https://learnredux.com/*/
+
+.likes-heart {
+	background: url("http://f.cl.ly/items/3Y373q2Q3J3Y1j203n0m/Bitmap-3.png") center no-repeat;
+	background-size: contain;
+	font-size: 2rem;
+	padding: 1rem;
+	position: absolute;
+	color: #FF0000;
+	left: 50%;
+	top: 50%;
+	pointer-events: none;
+}
+
+.likes-heart {
+	opacity: 0;
+	transition: all 0.5s;
+	transform: translateX(-50%) translateY(-50%) scale(5);
+	display: block;
+}
+
+.likes-heart.like-enter {
+	transition: all 0.2s;
+	transform: translateX(-50%) translateY(-50%) scale(1);
+	opacity: 1;
+}
+
+.likes-heart.like-enter.like-enter-active {
+	transform: translateX(-50%) translateY(-50%) scale(5);
+}
+
+.likes-heart.like-leave-active {
+	display: none;
+}
+/********************************/

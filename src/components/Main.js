@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import css from '../styles.css';
-import FlavourList from './FlavourList';
+import FlavourGrid from './FlavourGrid';
 import CreateNewFlavour from './CreateNewFlavour';
 import { Container, Row, Col, Button } from 'reactstrap';
 
@@ -19,7 +19,7 @@ class Main extends Component {
         </Row>
         <Row>
           <Col className='app-container-column'>
-            <FlavourList />            
+            <FlavourGrid {...this.props}/>            
           </Col>
         </Row>
        
