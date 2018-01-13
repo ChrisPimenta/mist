@@ -1,27 +1,36 @@
 import React from 'react';
 import { render } from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
+
+// CSS imports
 import 'bootstrap/dist/css/bootstrap.css';
+import './styles.css';
 
-// import react router deps
-import { Route, IndexRoute } from 'react-router';
-import { ConnectedRouter } from 'react-router-redux';
+import { Link, Route } from 'react-router-dom';
 
+//Redux imports
 import { Provider } from 'react-redux';
-import store from './store';
+import { ConnectedRouter } from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
+import store from './store';
 
-// import components
 import App from './components/App';
 
 const history = createHistory();
 
-render(
+const StoreHistoryRouting = () => (
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <Route exact path="/" component={App} />
+      <div className="container">
+        <h1 className="main-header">
+          <Link to="/">Mist</Link>
+        </h1>
+        <Route path="/" component={App} />   
+      </div>
     </ConnectedRouter>
-  </Provider>,
-  document.getElementById('root'));
+  </Provider>
+);
+
+render(<StoreHistoryRouting/>, document.getElementById('root'));
 
 registerServiceWorker();

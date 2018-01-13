@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import * as actionCreators from '../actions/actionCreators';
 import Main from './Main';
 
-//These functions are needed to hook up state and dispatch from the store to props that can be passed down to components.
 function mapStateToProps(state) {
   return {
     flavours: state.flavours,
@@ -16,6 +15,7 @@ function mapDispatchToProps(dispatch) {
     dispatch)
 }
 
+//This binds the store state and dispatch to props in Main and renders Main
 const App = connect(mapStateToProps,
   mapDispatchToProps)(Main);
 

@@ -40,7 +40,7 @@ const flavours = [
     "name": "Toffee",
     "desc": "A sweet smooth toffee flavour.",
     "likes": 22,
-    "image_src": "https://cdn.pixabay.com/photo/2017/11/13/11/27/yorkshire-2945345_960_720.jpg"
+    "image_src": "https://cdn.pixabay.com/photo/2017/11/11/20/16/food-2940312__340.jpg"
   },
   {
     "code": "CAcyDyQwcXX",

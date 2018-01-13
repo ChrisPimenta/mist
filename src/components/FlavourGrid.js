@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Flavour from './Flavour';
 import { Container, Row, Col } from 'reactstrap';
+
+import Flavour from './Flavour';
 
 class FlavourGrid extends Component {
   renderFlavour(flavour, i) {
@@ -15,7 +16,7 @@ class FlavourGrid extends Component {
     return (
       <Container>
         <Row>
-          {this.props.flavours.map((flavour, i) => this.renderFlavour(flavour, i))}
+          {this.props.flavours.map((flavour, i) => this.renderFlavour(flavour, i))}          
         </Row>
       </Container>
     );
